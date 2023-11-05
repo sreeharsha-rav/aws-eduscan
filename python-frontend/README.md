@@ -37,7 +37,9 @@ The main file is `index.py` which imports various components from the `component
     - `AWS_S3_INPUT_BUCKET`: The name of your AWS S3 bucket for input files.
     - `AWS_S3_OUTPUT_BUCKET`: The name of your AWS S3 bucket for output files.
 
-4. To use the frontend, navigate to the directory containing `index.py` and simply run the following command:
+4. In `index.py`, update `test_case` value accordingly to appropriate test_case folder. 
+
+5. To use the frontend, navigate to the directory containing `index.py` and simply run the following command:
     ```bash
     streamlit run index.py
     ```

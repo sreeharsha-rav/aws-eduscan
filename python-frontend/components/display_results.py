@@ -27,7 +27,21 @@ def display_file_upload_results(object_key):
 # Function to display the results of workload generator
 def display_workload_results():
     s3_client = AWS_S3Client()
+    num_of_results = 0  # Number of results to display
 
+    # Number of results to expect
+    if test_case == 'test_case_1':
+        num_of_results = 8
+    elif test_case == 'test_case_2':
+        num_of_results = 100
+
+    # wait until all results are available
+    while True:
+        if s3_client.get_num_of_results(AWS_S3_OUTPUT_BUCKET) == num_of_results:
+            break
+        time.sleep(5)
+
+    # Download all results
     data = s3_client.download_all_results(AWS_S3_OUTPUT_BUCKET)
     
     if data:

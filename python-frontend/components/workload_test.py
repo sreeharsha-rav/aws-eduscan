@@ -3,7 +3,7 @@ import time
 
 from aws.workload import run_workload
 
-def workload_test():
+def workload_test(test):
     st.sidebar.title("Workload Test 🖥️")
     
     # Create an empty placeholder for the button and status message
@@ -18,8 +18,7 @@ def workload_test():
         status_placeholder.info('🚀 Running Workload Generator')
         
         # Simulate your workload test or any other task here
-        run_workload()
-        #time.sleep(5)
+        run_workload(test_case=test)
 
         # Change the button text and update the status message
         button_text = "Workload Completed"

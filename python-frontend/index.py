@@ -12,11 +12,12 @@ st.set_page_config(page_title="EduScan", page_icon="📖")
 # global variables
 is_file_uploaded = False
 is_workload_test_completed = False
+test_case = "test_case_2"
 
 # Sidebar
 with st.sidebar:
     # Workload Test section
-    is_workload_test_completed = workload_test()
+    is_workload_test_completed = workload_test(test=test_case)
 
     # Horizontal line spacer
     st.markdown("---")
@@ -44,7 +45,7 @@ with st.container():
         else:
             st.info('📊 Workload Test Results')
             # Display workload test results
-            result_data = display_workload_results()
+            result_data = display_workload_results(test_case)
         
         # Display Download link
         st.markdown(download_csv(result_data), unsafe_allow_html=True)

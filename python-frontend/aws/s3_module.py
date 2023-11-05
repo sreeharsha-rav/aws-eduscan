@@ -59,6 +59,21 @@ class AWS_S3Client:
             print("Error downloading data from S3.")
             return None
 
+    def get_num_of_results(self, bucket_name):
+        """
+        Function to get the number of results in an S3 bucket
+        """
+        try:
+            # Get a list of objects in the bucket
+            s3_objects = self.s3_client.list_objects(Bucket=bucket_name)
+
+            # Return the number of objects in the bucket
+            return len(s3_objects.get('Contents', []))
+
+        except:
+            print("Error downloading data from S3.")
+            return None
+
     def download_all_results(self, bucket_name):
         """
         Function to download all results from an S3 bucket

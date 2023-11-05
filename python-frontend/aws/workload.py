@@ -80,8 +80,7 @@ def workload_generator(test_case = "test_case_1"):
 	upload_files(test_case)
 	
 # Function to run workload
-def run_workload():
+def run_workload(test_case):
 	clear_input_bucket()
 	clear_output_bucket()	
-	workload_generator("test_case_1")
-	workload_generator("test_case_2")
+	workload_generator(test_case)
