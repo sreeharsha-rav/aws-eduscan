@@ -16,6 +16,3 @@ def display_main_section():
     """
 
     st.markdown(text)
-
-    # Team Details
-    st.write("**Team CloudPirates** - **Members**: Uttam Kumar, Jack Li, Sreeharsha Raveendra")
