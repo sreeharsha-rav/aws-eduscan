@@ -2,10 +2,9 @@ import streamlit as st
 
 def display_main_section():
     # Set the main title
-    st.title("CSE546 Project 2 - PaaS")
     
-    #st.title("EduScan 📖")
-    #st.write("*Your classroom assistant for seamless student identification and academic information retrieval.*")
+    st.title("EduScan 📖")
+    st.write("*Your classroom assistant for seamless student identification and academic information retrieval.*")
 
     # Project Summary
     text = """
