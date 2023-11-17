@@ -32,6 +32,8 @@ Eduscan is a python application that uses AWS Lambda and related services to pro
 
 This project aims to enhance classroom management with efficient student recognition and data retrieval.
 
+![AWS Eduscan Architecture](https://github.com/sreeharsha-rav/aws-eduscan/blob/main/aws_eduscan.png)
+
 ## Installation and Usage
 
 ### Prerequisites
